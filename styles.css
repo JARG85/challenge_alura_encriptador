@@ -1,0 +1,153 @@
+body {
+    background: #F3F5FC;
+}
+
+.logo {
+    margin-top: 40px;
+    margin-left: 84px;
+    float: left;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-around;
+}
+
+.sub_contenedor {
+    justify-content: left;
+    margin-top: 168px;
+    margin-left: 156px;
+
+}
+
+.texto_entrada {
+    border: none;
+    background-color: #F3F5FC;
+    font-size: 32px;
+    color: #0A3871;
+    resize: none;
+    height: 600px;
+    width: 100%;
+    font-family: Inter;
+}
+
+.texto_entrada::placeholder {
+    color: #0A3871;
+}
+
+.texto_entrada:focus {
+    outline: none;
+}
+
+.indicacion {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #495057;
+}
+
+.encriptar_boton,
+.desencriptar_boton {
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    font-style: normal;
+    line-height: 19px;
+    text-align: center;
+    font-family: Inter;
+    cursor: pointer;
+}
+
+.encriptar_boton {
+    background-color: #0A3871;
+    color: white;
+    margin-right: 24px;
+}
+
+.desencriptar_boton {
+    background-color: transparent;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+}
+
+.campo_desencriptado {
+    display: flex;
+    width: 400px;
+    height: 944px;
+    background-color: white;
+    border-radius: 32px;
+    box-shadow: 0 24px 32px -8px;
+    margin-right: 40px;
+    margin-top: 30px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.titulo_no_salida {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28.8px;
+    text-align: center;
+    width: 50%;
+    color: #343A40;
+}
+
+.descripcion_no_salida {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    width: 50%;
+    color: #343A40;
+}
+
+.copiar_boton {
+    display: none;
+}
+
+.descripcion {
+    display: none;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    height: 650px;
+    align-content: center;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        display: block;
+        float: none;
+        margin-left: 20px;
+    }
+
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sub_contenedor {
+        margin: 0;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .campo_desencriptado {
+        width: 100%;
+    }
+
+    .texto_entrada {
+        height: 400px;
+    }
+
+    .campo_desencriptado {
+        height: 200px;
+    }
+
+}

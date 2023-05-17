@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador by JARG</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <img src="./assets/logo.png" alt="logo" class="logo" />
+    <div class="contenedor">
+        <div class="sub_contenedor">
+            <textarea placeholder="Ingrese el texto aquí" class="texto_entrada" id="texto_entrada"></textarea>
+            <div class="contendor_botones">
+                <p class="indicacion">&#x26A0; Solo letras minuscula y sin acento</p>
+                <button class="encriptar_boton" id="encriptar_boton">Encriptar</button>
+                <button class="desencriptar_boton" id="desencriptar_boton">Desencriptar</button>
+            </div>
+        </div>
+        <div class="campo_desencriptado">
+            <img src="assets/Muñeco.png" alt="imagen_ilustrativa_campo_vacio" class="ilustracion" id="ilustracion">
+            <p class="titulo_no_salida" id="titulo_no_salida"> Ningún mensaje fue encontrado </p>
+            <p class="descripcion_no_salida" id="descripcion_no_salida"> Ingresa el texto que desees encriptar o desencriptar</p>
+            <p class="descripcion" id="descripcion"></p>
+            <button class="desencriptar_boton copiar_boton" id="copiar_boton">Copiar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
