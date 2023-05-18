@@ -2,37 +2,91 @@ body {
     background: #F3F5FC;
 }
 
+
 .logo {
     margin-top: 40px;
     margin-left: 84px;
-    float: left;
+    width: 31px;
+    height: 48px;
+}
+
+.custom_nav {
+    background-color: #0A3871;
+}
+
+.custom_a_color {
+    color: white;
+}
+
+.logo_letra {
+    font-size: 30px;
+    color: white;
+    font-family: 'Hind', sans-serif;
+    display: inline;
+    font-weight: bold;
 }
 
 .contenedor {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 20px;
 }
 
 .sub_contenedor {
     justify-content: left;
     margin-top: 168px;
     margin-left: 156px;
-
 }
 
 .texto_entrada {
     border: none;
-    background-color: #F3F5FC;
+    background-color: transparent;
     font-size: 32px;
-    color: #0A3871;
     resize: none;
     height: 600px;
     width: 100%;
     font-family: Inter;
 }
 
-.texto_entrada::placeholder {
+
+.custom_a_color_azul:focus {
+    color: aqua;
+}
+
+.custom_a_color_azul:hover {
+    color: aqua;
+}
+
+.custom_a_color_rojo:hover {
+    color: #700000;
+}
+
+.custom_a_color_rojo:focus{
+    color: #700000;
+}
+
+.custom_a_color_verde:hover {
+    color: #005f00;
+}
+
+.custom_a_color_verde:focus{
+    color: #005f00;
+}
+
+.texto_entrada_azul {
     color: #0A3871;
+}
+
+.texto_entrada_azul::placeholder {
+    color: #0A3871;
+}
+
+.texto_entrada_rojo::placeholder {
+    color: #b20000;
+}
+
+.texto_entrada_verde::placeholder {
+    color: #25b125;
 }
 
 .texto_entrada:focus {
@@ -73,7 +127,7 @@ body {
 .campo_desencriptado {
     display: flex;
     width: 400px;
-    height: 944px;
+    height: 850px;
     background-color: white;
     border-radius: 32px;
     box-shadow: 0 24px 32px -8px;
@@ -118,7 +172,20 @@ body {
     align-content: center;
 }
 
-@media (max-width: 768px) {
+footer {
+    display: flex;
+    background-color: #0A3871;
+    color: white;
+    justify-content: center;
+    margin-top: auto;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+@media (max-width: 930px) {
     .logo {
         display: block;
         float: none;
@@ -148,6 +215,10 @@ body {
 
     .campo_desencriptado {
         height: 200px;
+    }
+
+    .ilustracion {
+        display: none;
     }
 
 }

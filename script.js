@@ -7,6 +7,8 @@ let titulo = document.getElementById('titulo_no_salida');
 let descripcion = document.getElementById('descripcion');
 let copiar_boton = document.getElementById('copiar_boton');
 
+//logica base
+
 const encriptar = (cadena) => {
     cadena = cadena.replace(/e/g, "enter");
     cadena = cadena.replace(/i/g, "imes");
@@ -41,7 +43,10 @@ const remover_imagen = (values) => {
 }
 
 const colocar_imagen = () => {
-    imagen.style.display = 'inline';
+    if (window.innerWidth >= 768) {
+        imagen.style.display = 'inline';
+    }
+
     titulo.style.display = 'block';
     descripcion_no_salida.style.display = 'block';
     copiar_boton.style.display = 'none'
@@ -69,9 +74,70 @@ boton_desencriptar.addEventListener('click', () => {
 })
 
 copiar_boton.addEventListener('click', () => {
-    if(navigator.clipboard && window.isSecureContext){
+    if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(encriptar(descripcion.innerText));
-    }else{
+    } else {
         alert('Tu navegador no soporta esta funcion');
     }
 })
+
+
+//logica de temas para color
+let tema_azul = document.getElementById('tema_azul');
+let tema_rojo = document.getElementById('tema_rojo');
+let tema_verde = document.getElementById('tema_verde');
+let footer = document.getElementById('footer');
+let logo = document.getElementById('logo');
+let links_nav = document.getElementById('links_nav');
+let link_toggle = document.getElementById('link_toggle');
+
+
+let custom_nav = document.getElementById('custom_nav');
+
+tema_azul.addEventListener('click', () => {
+    document.body.style.backgroundColor = '#F3F5FC';
+    custom_nav.style.backgroundColor = '#0A3871';
+    boton_encriptar.style.backgroundColor = '#0A3871';
+    footer.style.backgroundColor = '#0A3871';
+    texto_entrada.style.color = '#0A3871';
+    texto_entrada.className = 'texto_entrada texto_entrada_azul';
+    imagen.src = './assets/Muñeco.png'
+    boton_desencriptar.style.borderColor = '#0A3871' 
+    boton_desencriptar.style.color = '#0A3871'
+    logo.src = './assets/Logo.png'
+    links_nav.className = 'nav-link custom_a_color custom_a_color_azul';
+    link_toggle.className = 'nav-link dropdown-toggle custom_a_color custom_a_color_azul'
+
+})
+
+tema_rojo.addEventListener('click', () => {
+    document.body.style.backgroundColor = '#ffb9b9';
+    custom_nav.style.backgroundColor = '#b20000';
+    boton_encriptar.style.backgroundColor = '#b20000';
+    footer.style.backgroundColor = '#b20000';
+    texto_entrada.style.color = '#b20000';
+    texto_entrada.className = 'texto_entrada texto_entrada_rojo';
+    imagen.src = './assets/Muñeco_rojo.png'
+    boton_desencriptar.style.borderColor = '#b20000' 
+    boton_desencriptar.style.color = '#b20000'
+    logo.src = './assets/Logo_rojo.png'
+    links_nav.className = 'nav-link custom_a_color custom_a_color_rojo';
+    link_toggle.className = 'nav-link dropdown-toggle custom_a_color custom_a_color_rojo'
+})
+
+tema_verde.addEventListener('click', () => {
+    document.body.style.backgroundColor = '#cdffcd';
+    custom_nav.style.backgroundColor = '#25b125';
+    boton_encriptar.style.backgroundColor = '#25b125';
+    footer.style.backgroundColor = '#25b125';
+    texto_entrada.style.color = '#25b125';
+    texto_entrada.className = 'texto_entrada texto_entrada_verde';
+    imagen.src = './assets/Muñeco_verde.png'
+    boton_desencriptar.style.borderColor = '#25b125'
+    boton_desencriptar.style.color = '#25b125'
+    logo.src = './assets/Logo_verde.png'
+    links_nav.className = 'nav-link custom_a_color custom_a_color_verde';
+    link_toggle.className = 'nav-link dropdown-toggle custom_a_color custom_a_color_verde'
+})
+
+//logica tiempo real
