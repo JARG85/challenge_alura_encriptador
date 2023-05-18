@@ -102,9 +102,9 @@ tema_azul.addEventListener('click', () => {
     texto_entrada.style.color = '#0A3871';
     texto_entrada.className = 'texto_entrada texto_entrada_azul';
     imagen.src = './assets/Muñeco.png'
-    boton_desencriptar.style.borderColor = '#0A3871' 
+    boton_desencriptar.style.borderColor = '#0A3871'
     boton_desencriptar.style.color = '#0A3871'
-    logo.src = './assets/Logo.png'
+    logo.src = './assets/logo.png'
     links_nav.className = 'nav-link custom_a_color custom_a_color_azul';
     link_toggle.className = 'nav-link dropdown-toggle custom_a_color custom_a_color_azul'
 
@@ -118,9 +118,9 @@ tema_rojo.addEventListener('click', () => {
     texto_entrada.style.color = '#b20000';
     texto_entrada.className = 'texto_entrada texto_entrada_rojo';
     imagen.src = './assets/Muñeco_rojo.png'
-    boton_desencriptar.style.borderColor = '#b20000' 
+    boton_desencriptar.style.borderColor = '#b20000'
     boton_desencriptar.style.color = '#b20000'
-    logo.src = './assets/Logo_rojo.png'
+    logo.src = './assets/logo_rojo.png'
     links_nav.className = 'nav-link custom_a_color custom_a_color_rojo';
     link_toggle.className = 'nav-link dropdown-toggle custom_a_color custom_a_color_rojo'
 })
@@ -135,7 +135,7 @@ tema_verde.addEventListener('click', () => {
     imagen.src = './assets/Muñeco_verde.png'
     boton_desencriptar.style.borderColor = '#25b125'
     boton_desencriptar.style.color = '#25b125'
-    logo.src = './assets/Logo_verde.png'
+    logo.src = './assets/logo_verde.png'
     links_nav.className = 'nav-link custom_a_color custom_a_color_verde';
     link_toggle.className = 'nav-link dropdown-toggle custom_a_color custom_a_color_verde'
 })
