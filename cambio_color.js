@@ -10,24 +10,42 @@ let tema_verde = document.getElementById('tema_verde');
 let footer = document.getElementById('footer');
 let logo = document.getElementById('logo');
 let links_nav = document.getElementById('links_nav');
+let links_nav_2 = document.getElementById('links_nav_2');
 let link_toggle = document.getElementById('link_toggle');
 
 
 let custom_nav = document.getElementById('custom_nav');
 
 const cambio_color = (color_suave, color_intenso, texto_color, link_color, logo_ruta, ilustra_ruta) => {
+    if (boton_encriptar.classList.value.includes('enfocado')) {
+        boton_encriptar.style.backgroundColor = color_intenso;
+        boton_encriptar.style.borderColor = color_intenso;
+        boton_encriptar.style.color = 'white';
+
+        boton_desencriptar.style.borderColor = color_intenso;
+        boton_desencriptar.style.color = color_intenso;
+        boton_desencriptar.style.backgroundColor = color_suave;
+    } else {
+        boton_encriptar.style.backgroundColor = color_suave;
+        boton_encriptar.style.borderColor = color_intenso;
+        boton_encriptar.style.color = color_intenso;
+
+        boton_desencriptar.style.borderColor = color_intenso;
+        boton_desencriptar.style.color = 'white';
+        boton_desencriptar.style.backgroundColor = color_intenso;
+    }
     document.body.style.backgroundColor = color_suave;
     custom_nav.style.backgroundColor = color_intenso;
-    boton_encriptar.style.backgroundColor = color_intenso;
-    footer.style.backgroundColor = color_intenso;
     texto_entrada.style.color = color_intenso;
-    boton_desencriptar.style.borderColor = color_intenso;
-    boton_desencriptar.style.color = color_intenso;
+    copiar_boton.style.color = color_intenso;
+    copiar_boton.style.borderColor = color_intenso;
     texto_entrada.className = `texto_entrada ${texto_color}`;
     links_nav.className = `nav-link custom_a_color ${link_color}`;
+    links_nav_2.className = `nav-link custom_a_color ${link_color}`;
     link_toggle.className = `nav-link dropdown-toggle custom_a_color ${link_color}`;
     logo.src = logo_ruta;
     imagen.src = ilustra_ruta;
+    footer.style.backgroundColor = color_intenso;
 }
 
 tema_azul.addEventListener('click', () => {
