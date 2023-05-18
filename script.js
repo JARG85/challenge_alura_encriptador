@@ -75,7 +75,7 @@ boton_desencriptar.addEventListener('click', () => {
 
 copiar_boton.addEventListener('click', () => {
     if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(encriptar(descripcion.innerText));
+        navigator.clipboard.writeText(descripcion.innerText);
     } else {
         alert('Tu navegador no soporta esta funcion');
     }
