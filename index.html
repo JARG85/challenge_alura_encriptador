@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -35,7 +36,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link custom_a_color custom_a_color_azul" href="./encritador_pro.html"
-                id="links_nav">Encriptado PRO</a>
+                id="links_nav_2">Encriptado PRO</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle custom_a_color custom_a_color_azul" id="link_toggle" href="#"
@@ -59,8 +60,8 @@
     <div class="sub_contenedor">
       <textarea placeholder="Ingrese el texto aquí" class="texto_entrada texto_entrada_azul"
         id="texto_entrada"></textarea>
-      <div class="contendor_botones">
-        <p class="indicacion">&#x26A0; Solo letras minuscula y sin acento</p>
+      <p class="indicacion">&#x26A0; Solo letras minuscula y sin acento</p>
+      <div class="contenedor_botones">
         <button class="encriptar_boton" id="encriptar_boton">Encriptar</button>
         <button class="desencriptar_boton" id="desencriptar_boton">Desencriptar</button>
       </div>
@@ -73,10 +74,20 @@
       <p class="descripcion" id="descripcion"></p>
       <button class="desencriptar_boton copiar_boton" id="copiar_boton">Copiar</button>
     </div>
-
   </main>
   <footer id="footer">
-    <p>Desarrollado por: <a href="https://github.com/JARG85" target="_blank">JARG</a></p>
+    <div class="icono_contendor">
+      <a href="https://www.linkedin.com/in/jahir-rodriguez-3164a91b4/" target="_blank" class="linkeding"><i
+          class="fa-brands fa-linkedin"></i></a>
+      <a href="http://github.com/JARG85" target="_blank" rel="noopener noreferrer" class="linkeding">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="http://www.instagram.com/j.alejandro.r.g.1/" target="_blank" rel="noopener noreferrer" class="linkeding">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+    <p>Desarrollado por: <a href="https://github.com/JARG85" target="_blank">Jahir Rodriguez (JARG)</a></p>
+
   </footer>
 
   <script src="cambio_color.js"></script>
