@@ -37,8 +37,8 @@ const remover_imagen = (values) => {
     imagen_1.style.display = 'none';
     titulo.style.display = 'none';
     descripcion_no_salida.style.display = 'none';
-    copiar_boton_1.style.display = 'block'
-    descripcion.style.display = 'block';
+    copiar_boton_1.style.display = 'inline'
+    descripcion.style.display = 'inline';
     descripcion.textContent = values;
 }
 
@@ -69,16 +69,59 @@ texto_entrada_1.addEventListener('input', () => {
     }
 })
 
+const getColor = () => {
+    let colorState = document.getElementById('links_nav');
+    switch (true) {
+        case colorState.classList.value.includes('azul'):
+            return (['#F3F5FC', '#0A3871'])
+        case colorState.classList.value.includes('rojo'):
+            return (['#ffb9b9', '#b20000'])
+        case colorState.classList.value.includes('verde'):
+            return (['#cdffcd', '#25b125'])
+    }
+}
+
+const setColors = (colores) => {
+    if (modo_encriptar) {
+
+        boton_desencriptar_1.classList.add('enfocado');
+        boton_encriptar_1.classList.remove('enfocado');
+
+        boton_desencriptar_1.style.color = 'white';
+        boton_desencriptar_1.style.backgroundColor = colores[1];
+        boton_encriptar_1.style.backgroundColor = colores[0];
+        boton_encriptar_1.style.borderColor = colores[1];
+        boton_encriptar_1.style.color = colores[1];
+
+    } else {
+
+        boton_encriptar_1.classList.add('enfocado');
+        boton_desencriptar_1.classList.remove('enfocado');
+
+        boton_encriptar_1.style.color = 'white';
+        boton_encriptar_1.style.backgroundColor = colores[1];
+        boton_desencriptar_1.style.backgroundColor = colores[0];
+        boton_desencriptar_1.style.color = colores[1];
+        boton_desencriptar_1.style.borderColor = colores[1];
+    }
+}
+
 boton_encriptar_1.addEventListener('click', () => {
+    if (!modo_encriptar) {
+        setColors(getColor());
+        texto_entrada_1.value = ''
+        colocar_imagen();
+    }
     modo_encriptar = true;
-    boton_encriptar_1.className = 'encriptar_boton'
-    boton_desencriptar_1.className = 'desencriptar_boton'
 })
 
 boton_desencriptar_1.addEventListener('click', () => {
+    if (modo_encriptar) {
+        setColors(getColor());
+        texto_entrada_1.value = '';
+        colocar_imagen();
+    }
     modo_encriptar = false;
-    boton_encriptar_1.className = 'desencriptar_boton'
-    boton_desencriptar_1.className = 'encriptar_boton'
 })
 
 copiar_boton_1.addEventListener('click', () => {

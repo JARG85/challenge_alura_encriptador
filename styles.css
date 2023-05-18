@@ -2,6 +2,9 @@ body {
     background: #F3F5FC;
 }
 
+li{
+    cursor: pointer;
+}
 
 .logo {
     margin-top: 40px;
@@ -30,12 +33,13 @@ body {
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
+    height: 100%;
 }
 
 .sub_contenedor {
     justify-content: left;
-    margin-top: 168px;
-    margin-left: 156px;
+    margin-top: 5vh;
+    flex: .6;
 }
 
 .texto_entrada {
@@ -43,8 +47,9 @@ body {
     background-color: transparent;
     font-size: 32px;
     resize: none;
-    height: 600px;
+    height: 64vh;
     width: 100%;
+    min-width: 300px;
     font-family: Inter;
 }
 
@@ -100,9 +105,18 @@ body {
     color: #495057;
 }
 
+.contenedor_inferior{
+    width: 100%;
+}
+
+.contenedor_botones{
+    display: flex;
+    justify-content: center;
+}
+
 .encriptar_boton,
 .desencriptar_boton {
-    width: 328px;
+    max-width: 325px;
     height: 67px;
     border-radius: 24px;
     font-style: normal;
@@ -110,6 +124,7 @@ body {
     text-align: center;
     font-family: Inter;
     cursor: pointer;
+    flex: .5;
 }
 
 .encriptar_boton {
@@ -127,7 +142,7 @@ body {
 .campo_desencriptado {
     display: flex;
     width: 400px;
-    height: 850px;
+    height: 80vh;
     background-color: white;
     border-radius: 32px;
     box-shadow: 0 24px 32px -8px;
@@ -160,6 +175,8 @@ body {
 
 .copiar_boton {
     display: none;
+    width: 80%;
+    max-width: 364px;
 }
 
 .descripcion {
@@ -170,20 +187,34 @@ body {
     line-height: 36px;
     height: 650px;
     align-content: center;
+    width: 70%;
+    height: 0.9;
+    word-wrap: break-word;
+    overflow-y: auto;
 }
 
 footer {
     display: flex;
+    flex-direction: column;
     background-color: #0A3871;
     color: white;
     justify-content: center;
-    margin-top: auto;
+    margin-top: 6.2vh;
+    align-content: center;
+    align-items: center;
 }
 
 a {
     text-decoration: none;
-    color: red;
+    color: white;
+    font-weight: bold;
 }
+
+.linkeding { 
+    font-size: 30px;
+    margin-left: 10px;
+}
+
 
 @media (max-width: 930px) {
     .logo {
