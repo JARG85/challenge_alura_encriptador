@@ -23,7 +23,7 @@ const descencriptar = (cadena) => {
     cadena = cadena.replace(/imes/g, 'i');
     cadena = cadena.replace(/ai/g, 'a');
     cadena = cadena.replace(/ober/g, 'o');
-    cadena = cadena.replace(/ufalt/g, 'u');
+    cadena = cadena.replace(/ufat/g, 'u');
     return cadena;
 }
 
